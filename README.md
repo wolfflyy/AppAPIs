@@ -4,3 +4,6 @@ use "Scaffold-DbContext -connection name=constring Microsoft.EntityFrameworkCore
 
 
 Please update the string inside the (string cookieValue = "") to suit your login information (e.g. ASP.NET_SessionId=...; G_ENABLED_IDPS=google; G_AUTHUSER_H=0). IMPORTANT: this cookie is needed for the "GetScrapeResult" function to work as intended.
+
+
+There is a "StudentSchedule.bak" file uploaded here. This is a database backup file, import this file to your SQL SERVER EXPRESS. REMEMBER to change the connection string configuration inside the "appsettings.json" of the project to better suit your situation.
