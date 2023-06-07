@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
+using Microsoft.EntityFrameworkCore;
+
+namespace AppAPIs.Repos.Models;
+
+[Table("Class")]
+public partial class Class
+{
+    [Key]
+    public int Id { get; set; }
+
+    [StringLength(255)]
+    public string? ClassId { get; set; }
+
+    [StringLength(255)]
+    public string? Name { get; set; }
+
+    [InverseProperty("Class")]
+    public virtual ICollection<Schedule> Schedules { get; set; } = new List<Schedule>();
+}
