@@ -25,9 +25,6 @@ public partial class Schedule
     [Column(TypeName = "datetime")]
     public DateTime Date { get; set; }
 
-    [StringLength(255)]
-    public string? Slot { get; set; }
-
     [ForeignKey("ClassId")]
     [InverseProperty("Schedules")]
     public virtual Class? Class { get; set; }
